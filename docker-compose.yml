@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  jrebel-brains-license-server-for-java:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      TZ: "Asia/Shanghai"
+    ports:
+      - "8081:8081"
+    restart: always
