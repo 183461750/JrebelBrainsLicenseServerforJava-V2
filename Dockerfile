@@ -29,9 +29,9 @@ FROM openjdk:8u342-oracle
 
 WORKDIR /app
 
-COPY --from=builder /app/target/*.jar ./JrebelBrains.jar
+COPY --from=builder /app/target/*-with-dependencies.jar ./app.jar
 
 ENV PORT 8081
 
-CMD java -jar ./JrebelBrains.jar -p $PORT
+CMD java -jar ./app.jar -p $PORT
 
